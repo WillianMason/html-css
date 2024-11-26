@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mídias em HTML5</title>
+  </head>
+  <body>
+    <h1>Imagem dinâmicas</h1>
+    <p>
+      Tente abrir esse site em vários dispositivos diferentes ou simplesmente
+      aumente e diminua o tamanho do seu navegador.
+    </p>
+
+    <picture>
+      <source
+        media="(max-width: 750px)"
+        srcset="imagens/foto-p.png"
+        type="image/png"
+      />
+      <source
+        media="(max-width: 1050px)"
+        srcset="imagens/foto-m.png"
+        type="image/png"
+      />
+      <img src="imagens/foto-g.png" alt="imagem flexível" />
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio preload="metadata" autoplay controls>
+      <source src="midia/eastern.mp3" type="audio/mpeg" />
+      <source src="midia/eastern.ogg" type="audio/ogg" />
+      <source src="midia/eastern.wav" type="audio/wav" />
+      <!--eu posso ter arquivos em diferentes formatos, no type eu colocar audio/ogg e audio/wav esses são diferentes formatos.... caso ele não rode o mp3 ele cai para o ogg e se não reproduzir o formato ogg ele cai para wav
+      OBS: EVITE ARQUIVOS WAV POIS SÃO MUITO PESADOS-->
+      <p>
+        Caso não carregue um desses tres formatos de arquivo, infelizmento seu
+        navegador não consegue reproduzir audio
+      </p>
+      <a href="midia/eastern.mp3"> Clique aqui para baixar o arquivo mp3</a>
+    </audio>
+  </body>
+</html>
